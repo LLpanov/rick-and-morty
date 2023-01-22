@@ -1,4 +1,5 @@
 export * from './Characters';
+export * from './Character';
 export * from './CharacterDetail';
 export * from './Episodes';
 export * from './Episode';

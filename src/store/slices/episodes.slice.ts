@@ -28,7 +28,6 @@ export const getAllEpisodes = createAsyncThunk('episodes/getAllEpisodes', async 
 	try {
 		const { data }: { data: IEpisodeResponse } = await episodesService.getAll(page);
 		const { info, results } = data;
-		console.log(data);
 		return { info, results };
 	} catch (err: any) {
 		return rejectWithValue(err.message as string);

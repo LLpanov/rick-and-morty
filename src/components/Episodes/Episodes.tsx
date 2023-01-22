@@ -28,19 +28,40 @@ const Episodes: FC = () => {
 
 	return (
 		<>
-			<div className='flex flex-wrap gap-4 justify-center  mt-10 '>
+			<div className='flex flex-wrap gap-4   justify-center mt-16   touch-auto '>
 				{episodes.map(episode => (
 					<Episode key={episode.id} episode={episode} />
 				))}
 			</div>
-			<div className='flex-col text-center mt-4'>
-				<button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l' onClick={handlePrevClick}>
-					Prev
-				</button>
-				<span>{currentPage}</span>
-				<button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l' onClick={handleNextClick}>
-					Next
-				</button>
+			<div className='flex justify-center mt-10 mb-5'>
+				<nav aria-label='Page navigation example'>
+					<ul className='flex list-style-none'>
+						<li className='page-item'>
+							<button
+								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
+								onClick={handlePrevClick}
+							>
+								Prev
+							</button>
+						</li>
+						<li className='page-item'>
+							<button
+								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
+								onClick={handleNextClick}
+							>
+								{currentPage}
+							</button>
+						</li>
+						<li className='page-item'>
+							<button
+								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
+								onClick={handleNextClick}
+							>
+								Next
+							</button>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</>
 	);
