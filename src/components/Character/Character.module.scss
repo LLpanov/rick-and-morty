@@ -1,0 +1,38 @@
+.characterCard {
+	@apply flex flex-col justify-center;
+	.cardContainer {
+		@apply flex h-auto w-[550px] flex-col rounded-lg bg-gray-200 shadow-lg md:max-w-xl md:flex-row;
+		img {
+			@apply h-96 w-full rounded-t-lg object-contain object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
+		}
+
+		.characterCard {
+			@apply flex flex-col justify-center;
+			.cardContainer {
+				@apply relative flex h-auto w-[550px] flex-col rounded-lg bg-gray-200 shadow-lg md:max-w-xl md:flex-row;
+				img {
+					@apply h-96 w-full rounded-t-lg object-contain object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
+				}
+
+				.statusAlive {
+					@apply absolute top-0 right-0 h-[15px] w-[30px] border-2 bg-green-600 p-2 text-center text-white;
+				}
+
+				.statusDead {
+					@apply absolute top-0 right-0 h-[15px] w-[30px] border-2 bg-red-500 p-2 text-center text-white;
+				}
+			}
+		}
+	}
+}
+
+.cardContent {
+	@apply flex flex-col justify-start gap-y-3.5 p-6;
+	h2 {
+		@apply text-xl text-black;
+	}
+
+	p {
+		@apply text-sm text-black;
+	}
+}
