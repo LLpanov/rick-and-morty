@@ -24,7 +24,6 @@ const Episodes: FC = () => {
 			dispatch(setCurrentPage(currentPage + 1));
 		}
 	};
-	// const sortedEpisodes = episodes.sort((a, b) => (a.air_date > b.air_date ? 1 : -1));
 
 	return (
 		<>
@@ -37,26 +36,17 @@ const Episodes: FC = () => {
 				<nav aria-label='Page navigation example'>
 					<ul className='flex list-style-none'>
 						<li className='page-item'>
-							<button
-								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
-								onClick={handlePrevClick}
-							>
+							<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handlePrevClick}>
 								Prev
 							</button>
 						</li>
 						<li className='page-item'>
-							<button
-								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
-								onClick={handleNextClick}
-							>
+							<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
 								{currentPage}
 							</button>
 						</li>
 						<li className='page-item'>
-							<button
-								className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none'
-								onClick={handleNextClick}
-							>
+							<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
 								Next
 							</button>
 						</li>

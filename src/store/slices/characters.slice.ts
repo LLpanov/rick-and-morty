@@ -28,7 +28,6 @@ export const getAllCharacters = createAsyncThunk('characters/getAllCharacters', 
 	try {
 		const { data }: { data: ICharactersResponse } = await charactersService.getCharacters(page);
 		const { info, results } = data;
-		console.log(data);
 		return { info, results };
 	} catch (e: any) {
 		return rejectWithValue(e.message as string);

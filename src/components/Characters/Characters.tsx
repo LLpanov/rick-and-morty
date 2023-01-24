@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { getAllCharacters } from '../../store';
+import { getAllCharacters, setCurrentPageCharacter } from '../../store';
 import { Character } from '../Character';
 
 const Characters: FC = () => {
@@ -14,6 +14,20 @@ const Characters: FC = () => {
 	useEffect(() => {
 		dispatch(getAllCharacters(currentPage));
 	}, [currentPage, dispatch]);
+
+	const handlePrevClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+
+		if (currentPage > 1) {
+			dispatch(setCurrentPageCharacter(currentPage - 1));
+		}
+	};
+	const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		if (currentPage < pages) {
+			dispatch(setCurrentPageCharacter(currentPage + 1));
+		}
+	};
 	return (
 		<>
 			<div className={' flex flex-col mt-10 justify-center items-center'}>
@@ -23,7 +37,7 @@ const Characters: FC = () => {
 					</label>
 					<div className='relative'>
 						<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-							<svg aria-hidden='true' className='w-5 h-5 text-gray-500 dark:text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+							<svg aria-hidden='true' className='w-5 h-5 text-gray-500 dark:text-gray-300' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
 								<path strokeLinejoin='round' strokeWidth='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
 							</svg>
 						</div>
@@ -31,7 +45,7 @@ const Characters: FC = () => {
 							type='search'
 							id='default-search'
 							className={
-								'dark:placeholder-gray-100 dark:text-white block w-[550px] rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-500 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-600 dark:focus:border-blue-500 dark:focus:ring-blue-500;'
+								'dark:placeholder-gray-100 dark:text-green-50 block w-[550px] rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-[16px] text-gray-500  focus:ring-gray-500 dark:border-gray-500 dark:bg-gray-400 dark:focus:border-grey-600 dark:focus:ring-gray-500;'
 							}
 							placeholder='Search characters...'
 						/>
@@ -45,11 +59,35 @@ const Characters: FC = () => {
 				</form>
 			</div>
 
-			<div className={'grid grid-cols-2 gap-4 mt-10 place-items-center '}>
+			<div className={'grid grid-cols-2 gap-5 mt-10 place-items-center '}>
 				{characters.map(character => (
 					<Character key={character.id} character={character} />
 				))}
 			</div>
+			<div className={'flex flex-col justify-center items-center'}>
+				<div className='flex justify-center mt-10 mb-5'>
+					<nav aria-label='Page navigation example'>
+						<ul className='flex list-style-none'>
+							<li className='page-item'>
+								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handlePrevClick}>
+									Prev
+								</button>
+							</li>
+							<li className='page-item'>
+								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
+									{currentPage}
+								</button>
+							</li>
+							<li className='page-item'>
+								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
+									Next
+								</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<></>
 		</>
 	);
 };
