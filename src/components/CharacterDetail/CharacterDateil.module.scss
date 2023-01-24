@@ -1,0 +1,36 @@
+.containerDetails {
+	@apply mt-20 mb-20 flex flex-col items-center justify-center;
+}
+
+.cardDetails {
+	@apply w-[420px] rounded-lg border border-gray-200 bg-gray-50 shadow dark:border-gray-300 dark:bg-white;
+	& img {
+		@apply h-[389px] w-screen rounded-t-lg object-cover;
+	}
+}
+
+.cardText {
+	@apply p-5;
+	& h5 {
+		@apply mb-2 text-2xl font-bold tracking-tight text-gray-900;
+	}
+
+	& p {
+		@apply mb-3 font-normal text-gray-700 dark:text-gray-700;
+	}
+}
+
+.buttonContainer {
+	@apply relative p-2;
+	& svg {
+		@apply translate-x-0 transition ease-in-out;
+	}
+
+	&:hover svg {
+		@apply -translate-x-5;
+	}
+
+	& button {
+		@apply w-[100px] rounded-lg  bg-green-500 px-3 py-1.5 text-center text-sm font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300;
+	}
+}

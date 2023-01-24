@@ -1,10 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { charactersReducer, episodesReducer } from './slices';
+import { charactersReducer, episodesReducer, locationsReducer } from './slices';
 
 const rootReducer = combineReducers({
 	episodesReducer,
-	charactersReducer
+	charactersReducer,
+	locationsReducer
 });
 
 export const setupStore = () => {
