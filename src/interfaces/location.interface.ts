@@ -1,5 +1,6 @@
 export interface ILocation {
+	id: number;
 	name: string;
-
-	url: string;
+	type: string;
+	dimension: string;
 }

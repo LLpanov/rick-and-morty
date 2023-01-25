@@ -5,7 +5,7 @@ export interface IEpisodeResponse {
 	results: IEpisode[];
 }
 
-export interface IocationsResponse {
+export interface ILocationsResponse {
 	info: IInfo;
 	results: ILocation[];
 }

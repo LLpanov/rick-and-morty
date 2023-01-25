@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import { Location } from '../components';
+import { Locations } from '../components';
 
 const LocationPage: FC = () => {
 	return (
 		<>
-			<Location />
+			<Locations />
 		</>
 	);
 };
