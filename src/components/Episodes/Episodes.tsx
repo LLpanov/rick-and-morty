@@ -27,12 +27,12 @@ const Episodes: FC = () => {
 
 	return (
 		<>
-			<div className='flex flex-wrap gap-4   justify-center mt-16   touch-auto '>
+			<section className='flex flex-wrap gap-4   justify-center mt-16   touch-auto '>
 				{episodes.map(episode => (
 					<Episode key={episode.id} episode={episode} />
 				))}
-			</div>
-			<div className='flex justify-center mt-10 mb-5'>
+			</section>
+			<section className='flex justify-center mt-10 mb-5'>
 				<nav aria-label='Page navigation example'>
 					<ul className='flex list-style-none'>
 						<li className='page-item'>
@@ -52,7 +52,7 @@ const Episodes: FC = () => {
 						</li>
 					</ul>
 				</nav>
-			</div>
+			</section>
 		</>
 	);
 };

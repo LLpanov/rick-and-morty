@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 
@@ -16,15 +16,15 @@ const Header: FC = () => {
 				</div>
 
 				<nav className={styles.navigated}>
-					<Link to='/characters'>
+					<NavLink to='/characters' activeStyle={styles.navLink}>
 						<p className={styles.navLink}>Characters</p>
-					</Link>
-					<Link to='/location'>
+					</NavLink>
+					<NavLink to='/location'>
 						<p className={styles.navLink}>Location</p>
-					</Link>
-					<Link to='/episodes'>
+					</NavLink>
+					<NavLink to='/episodes'>
 						<p className={styles.navLink}>Episodes</p>
-					</Link>
+					</NavLink>
 				</nav>
 			</header>
 		</>

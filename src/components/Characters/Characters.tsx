@@ -54,7 +54,7 @@ const Characters: FC = () => {
 					<Character key={character.id} character={character} />
 				))}
 			</section>
-			<div className={'flex flex-col justify-center items-center'}>
+			<section className={'flex flex-col justify-center items-center'}>
 				<div className='flex justify-center mt-10 mb-5'>
 					<nav aria-label='Page navigation example'>
 						<ul className='flex list-style-none'>
@@ -76,7 +76,7 @@ const Characters: FC = () => {
 						</ul>
 					</nav>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 };

@@ -4,6 +4,10 @@
 
 .navLink {
 	@apply transition-colors hover:text-green-400;
+
+	& :active {
+		@apply text-green-600;
+	}
 }
 
 .navigated {
@@ -17,6 +21,7 @@
 		@apply ml-20 animate-flicker  p-10 text-center font-rick text-8xl font-bold opacity-70;
 	}
 }
+
 .imgConfig {
 	@apply h-40 w-40 cursor-pointer p-3 font-rick  drop-shadow-md hover:animate-pulse;
 }
