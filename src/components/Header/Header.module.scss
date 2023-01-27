@@ -4,10 +4,6 @@
 
 .navLink {
 	@apply transition-colors hover:text-green-400;
-
-	& :active {
-		@apply text-green-600;
-	}
 }
 
 .navigated {

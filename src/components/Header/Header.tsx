@@ -16,7 +16,7 @@ const Header: FC = () => {
 				</div>
 
 				<nav className={styles.navigated}>
-					<NavLink to='/characters' activeStyle={styles.navLink}>
+					<NavLink to='/characters' className={styles.navLink}>
 						<p className={styles.navLink}>Characters</p>
 					</NavLink>
 					<NavLink to='/location'>
