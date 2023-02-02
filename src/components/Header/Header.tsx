@@ -19,15 +19,16 @@ const Header: FC = () => {
 				</div>
 
 				<nav className={styles.navigated}>
-					<NavLink to='/characters' className={styles.navLink}>
-						<p className={styles.navLink}>Characters</p>
-					</NavLink>
-					<NavLink to='/location'>
-						<p className={styles.navLink}>Location</p>
-					</NavLink>
-					<NavLink to='/episodes'>
-						<p className={styles.navLink}>Episodes</p>
-					</NavLink>
+
+						<NavLink to='/characters ' >
+							<p >Characters</p>
+						</NavLink>
+						<NavLink to='/location' >
+							<p >Location</p>
+						</NavLink>
+						<NavLink to='/episodes'>
+							<p >Episodes</p>
+						</NavLink>
 				</nav>
 			</header>
 		</>
