@@ -27,7 +27,6 @@ export const getAllLocations = createAsyncThunk('location/getAllLocations', asyn
 	try {
 		const { data }: { data: ILocationsResponse } = await locationsService.getLocation(page);
 		const { info, results } = data;
-		console.log(data);
 		return { info, results };
 	} catch (e: any) {
 		return rejectWithValue(e.message as string);

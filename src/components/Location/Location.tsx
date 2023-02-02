@@ -11,9 +11,12 @@ const Location: FC<ILocationProps> = ({ location: { name, type, dimension } }) =
 	return (
 		<>
 			<section className={styles.locationCard}>
-				<svg className='w-10 h-10 mb-2 text-gray-500 dark:text-gray-400' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
-					<path fill-rule='evenodd' d='M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z' clip-rule='evenodd'></path>
-					<path d='M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z'></path>
+				<svg className="h-16 w-16 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+					 stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z"/>
+					<path
+						d="M17.905 13.057c2.208 1.756 3.436 3.308 3.012 4.035-.67 1.146-5.204-.204-10.129-3.016-4.924-2.812-8.374-6.022-7.705-7.168.418-.716 2.347-.458 4.936.524"/>
+					<circle cx="12" cy="12" r="6"/>
 				</svg>
 				<h5>{name}</h5>
 				<p>Type - {type}</p>
