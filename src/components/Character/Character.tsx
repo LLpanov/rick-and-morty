@@ -11,7 +11,7 @@ interface ICharacterProps {
 const Character: FC<ICharacterProps> = ({ character }) => {
 	return (
 		<>
-			<div className={styles.characterCard}>
+			<section className={styles.characterCard}>
 				<div className={styles.cardContainer}>
 					<div className={styles.status}>
 						<img src={character.image} alt={character.name} />
@@ -25,7 +25,7 @@ const Character: FC<ICharacterProps> = ({ character }) => {
 						</Link>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 };

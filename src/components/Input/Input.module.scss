@@ -1,3 +1,6 @@
 .boxForm{
   @apply flex flex-col mt-10 justify-center items-center
 }
+span {
+  @apply text-red-500 font-thin flex justify-center mt-2
+}

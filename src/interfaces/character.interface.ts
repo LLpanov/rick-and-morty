@@ -1,4 +1,5 @@
 import { IEpisode } from './episode.interface';
+import {ILocation} from "./location.interface";
 
 export interface ICharacter {
 	id: number;
@@ -7,10 +8,14 @@ export interface ICharacter {
 	species: string;
 	type: string;
 	gender: string;
-	origin: Location;
-	location: Location;
+	origin: IOrigin;
+	location: ILocation;
 	image: string;
 	episode: IEpisode[];
 	url: string;
 	created: string;
+}
+export interface IOrigin {
+	name: string;
+	url: string;
 }
