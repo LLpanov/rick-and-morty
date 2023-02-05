@@ -1,11 +1,11 @@
 .cardHero {
-  @apply flex flex-col justify-center;
+  @apply flex flex-col justify-center ;
   &:hover {
-    @apply scale-105 transform animate-neonGlow cursor-pointer transition-colors;
+    @apply scale-105 transform  animate-neonGlow rounded-2xl cursor-pointer transition-colors;
   }
 }
 .heroContainer{
-  @apply relative flex h-[300px] w-[550px] cursor-pointer flex-col rounded-lg bg-gray-200 shadow-lg md:max-w-xl md:flex-row;
+  @apply relative flex h-full w-[750px] cursor-pointer flex-col rounded-lg bg-slate-400 shadow-lg md:max-w-xl md:flex-row ;
   .statusHero {
     @apply relative;
     img {
@@ -13,26 +13,26 @@
     }
 
     .heroAlive {
-      @apply absolute right-1 top-1 h-[30px] w-[83px] rounded-b-sm bg-green-600 p-2 text-center text-[10px] font-bold text-white shadow-md;
+      @apply absolute right-1 top-1 h-[30px] w-[85px] rounded-b-sm bg-green-600 opacity-90 p-2 text-center text-[11px] font-bold text-white shadow-md;
     }
 
     .heroDead {
-      @apply absolute right-1 top-1 h-[30px] w-[83px]  rounded-b-sm bg-red-500 p-2 text-center text-[10px] font-bold text-white shadow-md;
+      @apply absolute right-1 top-1 h-[30px] w-[85px]  rounded-b-sm bg-red-500 opacity-90 p-2 text-center text-[11px] font-bold text-white shadow-md;
     }
 
     .heroUnknown {
-      @apply absolute right-1 top-1 h-[30px] w-[83px]  rounded-b-sm bg-white p-2 text-center text-[10px]  font-bold text-black shadow-md;
+      @apply absolute right-1 top-1 h-[30px] w-[85px]  rounded-b-sm bg-white opacity-90 p-2 text-center text-[11px]  font-bold text-black shadow-md;
     }
   }
 }
 
 .heroContent{
-  @apply flex flex-col justify-start gap-y-3.5 p-6;
+  @apply flex flex-col justify-start gap-y-2.5 p-6;
   h2 {
-    @apply text-2xl text-black font-semibold;
+    @apply text-2xl text-black font-semibold gap-y-2;
   }
 
   p {
-    @apply text-xl text-black font-serif;
+    @apply text-xl text-black text-[15px];
   }
 }

@@ -1,5 +1,5 @@
-import { IEpisode } from './episode.interface';
-import {ILocation} from "./location.interface";
+import {IEpisode} from './episode.interface';
+
 
 export interface ICharacter {
 	id: number;
@@ -19,3 +19,10 @@ export interface IOrigin {
 	name: string;
 	url: string;
 }
+export interface ILocation {
+	id: number;
+	name: string;
+	type: string;
+	dimension: string;
+}
+
