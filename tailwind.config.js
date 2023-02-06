@@ -48,7 +48,7 @@ module.exports = {
 			animation: {
 				flicker: 'flicker 2s ease-in-out infinite alternate',
 				neonGlow: 'neonGlow 2s ease-in-out infinite alternate',
-				borderHero: 'borderHero 5s ease-in-out infinite',
+				borderHero: 'borderHero 2s linear infinite',
 			},
 		},
 	},

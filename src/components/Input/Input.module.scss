@@ -1,18 +1,17 @@
-.boxForm{
+.boxForm {
   @apply flex flex-col mt-10 justify-center items-center
 }
+
 span {
   @apply text-red-500 font-thin flex justify-center mt-2
 }
 
-.animatedBox{
-  @apply grid grid-cols-2 gap-5 mt-10 place-items-center  rounded-2xl bg-slate-700  shadow-2xl  p-5 border-solid rounded-2xl border-green-400 border-2
-}
-
-.animatePulse {
-  @apply absolute -top-2 -left-2  -right-2 -bottom-2 border-solid rounded-2xl border-green-400 border-2
+.animatedBox {
+  @apply grid grid-cols-2 gap-5 mt-10 place-items-center relative rounded-2xl bg-slate-700  shadow-2xl  p-5 border-solid rounded-2xl border-green-400 border-2
 
 }
+
+
 
 
 

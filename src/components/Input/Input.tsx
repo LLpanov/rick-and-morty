@@ -44,11 +44,13 @@ const Input: FC = () => {
 
 							<input
 								type='search'
+								defaultValue={''}
 								{...register('name', {
 									required: true,
 									maxLength: 30,
 									pattern: /^[a-zA-Z]+$/
 								})}
+
 								id='default-search'
 								className={'dark:placeholder-gray-100 dark:text-green-50 block w-[550px] rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-[16px] text-gray-500  focus:ring-gray-500 dark:border-gray-500 dark:bg-gray-400 dark:focus:border-grey-600 dark:focus:ring-gray-500;'}
 								placeholder='Search characters...'
@@ -59,15 +61,18 @@ const Input: FC = () => {
 							</button>
 						</div>
 						{errors.name && <span>Name must be in English and no longer than 30 characters</span>}
+						{!!FilteredHero && <span>Not found this character...</span>}
 					</form>
 				</section>
 
-				<div className={'p-10'}>
-
-						<div className={styles.animatedBox}  >{filteredCharacters.map(hero => (
-							<FilteredHero key={hero.id} hero={hero}/>
-						))}
-                </div>
+				<div className={'flex-col items-center justify-center p-10'}>
+					{filteredCharacters.length > 0 && (
+						<div className={styles.animatedBox}>
+							{filteredCharacters.map(hero => (
+								<FilteredHero key={hero.id} hero={hero} />
+							))}
+						</div>
+					)}
 				</div>
 			</section>
 		</>
