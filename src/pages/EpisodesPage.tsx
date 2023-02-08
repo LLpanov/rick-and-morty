@@ -4,9 +4,7 @@ import { Episodes } from '../components';
 
 const EpisodesPage: FC = () => {
 	return (
-		<>
 			<Episodes />
-		</>
 	);
 };
 

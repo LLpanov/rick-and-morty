@@ -4,9 +4,7 @@ import { Locations } from '../components';
 
 const LocationPage: FC = () => {
 	return (
-		<>
 			<Locations />
-		</>
 	);
 };
 

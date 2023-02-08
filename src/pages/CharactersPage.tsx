@@ -4,9 +4,7 @@ import { Characters } from '../components';
 
 const CharactersPage: FC = () => {
 	return (
-		<>
 			<Characters />
-		</>
 	);
 };
 

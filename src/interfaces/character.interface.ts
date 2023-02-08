@@ -24,5 +24,6 @@ export interface ILocation {
 	name: string;
 	type: string;
 	dimension: string;
+	residents:[string]
 }
 

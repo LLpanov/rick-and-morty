@@ -1,8 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import styles from './CharacterDateil.module.scss';
-
 
 const CharacterDetail: FC = () => {
 	const {
@@ -14,7 +13,7 @@ const CharacterDetail: FC = () => {
 			<section className={styles.containerDetails}>
 				<div className={styles.cardDetails}>
 					<img src={image} alt={name} />
-						<p className={status === 'Alive' ? styles.alive : status === 'Dead' ? styles.dead : styles.unknown}>{status}</p>
+					<p className={status === 'Alive' ? styles.alive : status === 'Dead' ? styles.dead : styles.unknown}>{status}</p>
 					<div className={styles.cardText}>
 						<h5>{name}</h5>
 						<p>Gender: {gender}</p>

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { ICharacter } from '../../interfaces';
@@ -50,7 +50,6 @@ const Input: FC = () => {
 									maxLength: 30,
 									pattern: /^[a-zA-Z]+$/
 								})}
-
 								id='default-search'
 								className={'dark:placeholder-gray-100 dark:text-green-50 block w-[550px] rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-[16px] text-gray-500  focus:ring-gray-500 dark:border-gray-500 dark:bg-gray-400 dark:focus:border-grey-600 dark:focus:ring-gray-500;'}
 								placeholder='Search characters...'
@@ -61,7 +60,7 @@ const Input: FC = () => {
 							</button>
 						</div>
 						{errors.name && <span>Name must be in English and no longer than 30 characters</span>}
-						{!!FilteredHero && <span>Not found this character...</span>}
+						{/*{!!FilteredHero && <span>Not found this character...</span>}*/}
 					</form>
 				</section>
 
