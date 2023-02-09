@@ -5,6 +5,7 @@ export * from './Episodes';
 export * from './Episode';
 export * from './Error';
 export * from './Residents';
+export * from './ResidentCard';
 export * from './Input';
 export * from './Header';
 export * from './Layout';

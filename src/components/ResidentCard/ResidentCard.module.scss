@@ -1,0 +1,6 @@
+.mainHero {
+  @apply flex flex-col justify-center ;
+  &:hover {
+    @apply scale-105 transform  animate-neonGlow rounded-2xl cursor-pointer transition-colors;
+  }
+}
