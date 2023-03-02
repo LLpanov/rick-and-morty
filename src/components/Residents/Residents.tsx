@@ -33,7 +33,7 @@ const Residents: FC = () => {
 				<h1 className={'text-gray-200 text-center font-bold text-3xl'}> Residents of Location : {name} </h1>
 			</section>
 
-			<section className={'grid grid-cols-3 bg-slate-400  '}>
+			<section className={'grid grid-cols-3  place-items-center bg-slate-400 gap-y-3.5 py-2.5'}>
 				{charactersData.map(resident => <ResidentCard key={resident.id} resident={resident} />)}
 			</section>
 		</>

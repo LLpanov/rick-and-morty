@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components';
 import {
 	CharacterDetailsPage,
-	CharactersPage,
+	CharactersPage, EpisodeCharactersPage,
 	EpisodesPage,
 	ErrorPage,
 	LocationPage,
@@ -18,6 +18,7 @@ const App: FC = () => {
 				<Route index element={<Navigate to={'episodes'} />} />
 
 				<Route path={'episodes'} element={<EpisodesPage />} />
+				<Route path={'episodes/:id'} element={<EpisodeCharactersPage />} />
 
 				<Route path={'characters'} element={<CharactersPage />} />
 				<Route path={'characters/:id'} element={<CharacterDetailsPage />} />

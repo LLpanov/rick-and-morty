@@ -12,12 +12,12 @@ const ResidentCard: FC<IResidentProps> = ({ resident: { name, status, image, gen
 		<>
 			<section className={styles.mainHero} >
 				<img src={image} alt={name} />
-				<div>{status}</div>
-				<div >
+				<span className={status === 'Alive' ? styles.alive_person : status === 'Dead' ? styles.dead_person  : styles.unknown_person}>{status}</span>
+				<div className={styles.intoHero}>
 					<h2>{name}</h2>
-					<p>gender: {gender}</p>
-					<p>type: {type ? type : 'unknown'}</p>
-					<p>species: {species}</p>
+					<p>Gender : {gender}</p>
+					<p>Type : {type ? type : 'unknown'}</p>
+					<p>Species : {species}</p>
 				</div>
 			</section>
 		</>

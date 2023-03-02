@@ -1,6 +1,32 @@
-.mainHero {
-  @apply flex flex-col justify-center ;
-  &:hover {
-    @apply scale-105 transform  animate-neonGlow rounded-2xl cursor-pointer transition-colors;
+.mainHero{
+  @apply bg-slate-500 p-2 w-[270px] h-auto flex flex-col rounded-xl;
+  & span {
+    @apply text-center font-[8px] w-full rounded-xl mb-2
   }
+}
+img{
+  @apply w-full rounded-xl
+}
+.intoHero{
+  @apply flex flex-col;
+  h2{
+    @apply font-semibold text-center
+  }
+  p{
+    @apply font-serif
+  }
+
+}
+
+
+.alive_person {
+  @apply h-8 bg-green-600 text-center  text-white p-1;
+}
+
+.dead_person {
+  @apply h-8 bg-red-500 text-white text-center p-1 ;
+}
+
+.unknown_person {
+  @apply h-8 bg-gray-300 text-black text-center p-1;
 }
