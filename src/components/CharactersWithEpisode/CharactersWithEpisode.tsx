@@ -1,19 +1,37 @@
-import { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-interface IStateEpisode {
-	episode: string;
-	characters: string[];
-	name: string;
-}
+import { ICharacter } from '../../interfaces';
+import { episodesService } from '../../services';
+import { HeroWithEpisode } from '../HeroWithEpisode';
 
 const CharactersWithEpisode: FC = () => {
-	const { state } = useLocation<IStateEpisode>();
+	const { state } = useLocation();
 	const { episode, characters, name } = state;
-	console.log(episode, characters, name);
+
+	const [characterData, setCharacterData] = useState<ICharacter[]>([]);
+
+	useEffect(() => {
+		async function fetchCharacterData() {
+			const characterData = await episodesService.getCharactersData(characters);
+			setCharacterData(characterData);
+		}
+
+		fetchCharacterData();
+	}, [characters]);
+
 	return (
 		<>
-			<h1>{name}</h1>
+			<section className={'flex flex-col min-h-screen '}>
+				<div className={'bg-slate-700 flex flex-col h-16 '}>
+					<h1 className={' justify-center text-2xl  text-gray-200 text-center items-center mt-4 h-full'}>
+						{episode} : "{name}"
+					</h1>
+				</div>
+				{characterData.map(character => (
+					<HeroWithEpisode key={character.id} character={character} />
+				))}
+			</section>
 		</>
 	);
 };

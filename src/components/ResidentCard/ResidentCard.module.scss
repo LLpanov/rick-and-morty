@@ -1,5 +1,5 @@
 .mainHero{
-  @apply bg-slate-500 p-2 w-[270px] h-auto flex flex-col rounded-xl;
+  @apply bg-slate-500 p-2 w-[270px] h-auto flex flex-col rounded-xl ;
   & span {
     @apply text-center font-[8px] w-full rounded-xl mb-2
   }
