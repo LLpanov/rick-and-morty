@@ -28,9 +28,9 @@ const CharactersWithEpisode: FC = () => {
 						{episode} : "{name}"
 					</h1>
 				</div>
-				{characterData.map(character => (
-					<HeroWithEpisode key={character.id} character={character} />
-				))}
+				<div className={'grid grid-cols-4 place-items-center p-4 gap-3.5 '}>{characterData.map(character => (
+					<HeroWithEpisode key={character.id} character={character}/>
+				))}</div>
 			</section>
 		</>
 	);

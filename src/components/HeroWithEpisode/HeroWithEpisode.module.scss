@@ -1,0 +1,39 @@
+.character-card {
+  @apply bg-white rounded-lg overflow-hidden shadow-md mb-8 w-2/3 h-auto;
+
+  &__image-wrapper {
+    @apply w-60 mx-auto pt-60 relative;
+
+    & img {
+      @apply w-fit h-fit object-cover absolute top-0 left-0 p-1;
+    }
+  }
+
+  &__info {
+    @apply p-6 text-center;
+
+    & h2 {
+      @apply text-lg text-xl mb-3 text-gray-700 mt-3;
+    }
+
+    & .status {
+      @apply inline-block w-full text-white text-xs font-medium rounded p-1.5 mt-2;
+
+      &.alive {
+        @apply bg-green-500;
+      }
+
+      &.dead {
+        @apply bg-red-500;
+      }
+
+      &.unknown {
+        @apply bg-gray-500 text-black;
+      }
+    }
+
+    & p {
+      @apply text-sm text-gray-600;
+    }
+  }
+}
