@@ -28,7 +28,9 @@ const Characters: FC = () => {
 		if (currentPage < pages) {
 			dispatch(setCurrentPageCharacter(currentPage + 1));
 		}
+
 	};
+
 
 	return (
 		<>

@@ -8,8 +8,11 @@ interface IResidentProps {
 }
 
 const ResidentCard: FC<IResidentProps> = ({ resident: { name, status, image, gender, type, species } }) => {
+
+
 	return (
 		<>
+
 			<section className={styles.mainHero} >
 				<img src={image} alt={name} />
 				<span className={status === 'Alive' ? styles.alive_person : status === 'Dead' ? styles.dead_person  : styles.unknown_person}>{status}</span>
@@ -20,6 +23,7 @@ const ResidentCard: FC<IResidentProps> = ({ resident: { name, status, image, gen
 					<p>Species : {species}</p>
 				</div>
 			</section>
+
 		</>
 	);
 };
