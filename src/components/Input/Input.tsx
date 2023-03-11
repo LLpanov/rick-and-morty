@@ -12,6 +12,7 @@ interface FormValues {
 
 const Input: FC = () => {
 	const [filteredCharacters, setFilteredCharacters] = useState<ICharacter[]>([]);
+	const [error, setError] = useState(false);
 
 	const {
 		register,
@@ -20,12 +21,22 @@ const Input: FC = () => {
 		formState: { errors }
 	} = useForm<FormValues>({ mode: 'onChange' });
 	const onSubmit: SubmitHandler<FormValues> = async data => {
-		const { name } = data;
-		const { data: charactersData } = await charactersService.getCharactersByName(name);
-		const filteredCharacters = charactersData.results;
-		setFilteredCharacters(filteredCharacters);
-		reset();
-	};
+
+		try {
+			const { name } = data;
+			const { data: charactersData } = await charactersService.getCharactersByName(name);
+			const filteredCharacters = charactersData.results;
+			setFilteredCharacters(filteredCharacters);
+			setError(false)
+
+		}
+		catch (error) {
+			setError(true);
+			setTimeout(() => setError(false), 10000);
+
+		}
+		reset()
+	}
 
 	return (
 		<>
@@ -60,10 +71,12 @@ const Input: FC = () => {
 							</button>
 						</div>
 						{errors.name && <span>Name must be in English and no longer than 30 characters</span>}
-						{/*{!!FilteredHero && <span>Not found this character...</span>}*/}
+						{error  && (
+							<span>Not found this character...</span>
+						)}
+
 					</form>
 				</section>
-
 				<div className={'flex-col items-center justify-center p-10'}>
 					{filteredCharacters.length > 0 && (
 						<div className={styles.animatedBox}>

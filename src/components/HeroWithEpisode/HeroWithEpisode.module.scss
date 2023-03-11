@@ -16,18 +16,18 @@
       @apply text-lg text-xl mb-3 text-gray-700 mt-3;
     }
 
-    & .status {
+    & .heroStatus {
       @apply inline-block w-full text-white text-xs font-medium rounded p-1.5 mt-2;
 
-      &.alive {
+      &.heroAlive {
         @apply bg-green-500;
       }
 
-      &.dead {
+      &.heroDied {
         @apply bg-red-500;
       }
 
-      &.unknown {
+      &.heroUnknown {
         @apply bg-gray-500 text-black;
       }
     }

@@ -28,3 +28,43 @@
 .imgConfig {
 	@apply h-40 w-40 cursor-pointer p-3.5 font-rick mt-5 drop-shadow-md hover:animate-pulse ;
 }
+
+@media (max-width: 1212px) {
+
+
+	.navigated {
+      p {
+		  @apply font-sans
+	  }
+	}
+
+	.animatedLogo {
+		h1 {
+			@apply ml-20 animate-flicker  p-11 text-center font-rick text-7xl font-bold opacity-70;
+		}
+	}
+
+}
+@media (max-width: 1055px){
+	.animatedLogo {
+		h1 {
+			@apply ml-20 animate-flicker  p-11 text-center font-rick text-6xl font-bold opacity-70;
+		}
+	}
+}
+@media (max-width: 993px) {
+	.header{
+		@apply flex h-28 w-full justify-between
+
+	}
+	.animatedLogo {
+		@apply hidden;
+	}
+	.imgConfig{
+		@apply hidden
+	}
+	.navigated {
+
+	 @apply w-full
+	}
+}
