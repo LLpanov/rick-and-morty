@@ -21,22 +21,18 @@ const Input: FC = () => {
 		formState: { errors }
 	} = useForm<FormValues>({ mode: 'onChange' });
 	const onSubmit: SubmitHandler<FormValues> = async data => {
-
 		try {
 			const { name } = data;
 			const { data: charactersData } = await charactersService.getCharactersByName(name);
 			const filteredCharacters = charactersData.results;
 			setFilteredCharacters(filteredCharacters);
-			setError(false)
-
-		}
-		catch (error) {
+			setError(false);
+		} catch (error) {
 			setError(true);
 			setTimeout(() => setError(false), 10000);
-
 		}
-		reset()
-	}
+		reset();
+	};
 
 	return (
 		<>
@@ -71,13 +67,10 @@ const Input: FC = () => {
 							</button>
 						</div>
 						{errors.name && <span>Name must be in English and no longer than 30 characters</span>}
-						{error  && (
-							<span>Not found this character...</span>
-						)}
-
+						{error && <span>Not found this character...</span>}
 					</form>
 				</section>
-				<div className={'flex-col items-center justify-center p-10'}>
+				<div className='flex-col items-center justify-center'>
 					{filteredCharacters.length > 0 && (
 						<div className={styles.animatedBox}>
 							{filteredCharacters.map(hero => (

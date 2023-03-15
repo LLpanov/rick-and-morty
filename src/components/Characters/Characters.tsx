@@ -28,20 +28,18 @@ const Characters: FC = () => {
 		if (currentPage < pages) {
 			dispatch(setCurrentPageCharacter(currentPage + 1));
 		}
-
 	};
-
 
 	return (
 		<>
 			<Input />
 
-			<section className={'grid grid-cols-2 gap-5 mt-10 place-items-center '}>
+			<section className='grid grid-cols-2 gap-5 mt-10 place-items-center'>
 				{characters.map(character => (
 					<Character key={character.id} character={character} />
 				))}
 			</section>
-				<section className={'flex flex-col justify-center items-center'}>
+			<section className='flex flex-col justify-center items-center'>
 				<div className='flex justify-center mt-10 mb-5'>
 					<nav aria-label='Page navigation example'>
 						<ul className='flex list-style-none'>
