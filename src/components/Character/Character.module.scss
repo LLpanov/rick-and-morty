@@ -1,61 +1,162 @@
 .characterCard {
-	@apply flex flex-col justify-center;
-	&:hover {
-		@apply scale-105 transform animate-neonGlow cursor-pointer transition-colors;
-	}
+  @apply flex flex-col justify-center;
+  &:hover {
+    @apply scale-105 transform animate-neonGlow cursor-pointer transition-colors;
+  }
 
-	.cardContainer {
-		@apply relative flex h-full w-[550px] cursor-pointer flex-col rounded-lg bg-gray-200 shadow-lg md:max-w-xl md:flex-row;
-		.status {
-			@apply relative;
-			img {
-				@apply h-96 w-full rounded-t-lg object-contain object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
-			}
+  .cardContainer {
+    @apply relative flex h-full w-[550px] cursor-pointer flex-row rounded-lg bg-gray-200 shadow-lg;
+    .status {
+      @apply relative;
+      img {
+        @apply h-fit w-full
+      }
 
-			.statusAlive {
-				@apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-green-600 p-1.5 text-center text-[10px] font-bold text-white shadow-md;
-			}
+      .statusAlive {
+        @apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-green-600 p-1.5 text-center text-[10px] font-bold text-white shadow-md;
+      }
 
-			.statusDead {
-				@apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-red-500 p-1.5 text-center text-[10px] font-bold text-white shadow-md;
-			}
+      .statusDead {
+        @apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-red-500 p-1.5 text-center text-[10px] font-bold text-white shadow-md;
+      }
 
-			.statusUnknown {
-				@apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-white p-1.5 text-center text-[10px]  font-bold text-black shadow-md;
-			}
-		}
+      .statusUnknown {
+        @apply absolute right-0 top-0 h-[27px] w-[63px] rounded-b-sm bg-white p-1.5 text-center text-[10px]  font-bold text-black shadow-md;
+      }
+    }
+  }
+}
 
-		.cardContent {
-			@apply flex flex-col justify-start gap-y-3.5 p-6;
-			h2 {
-				@apply text-2xl text-black;
-			}
+.cardContent {
+  @apply flex flex-col justify-evenly gap-y-3.5 p-6;
+  h2 {
+    @apply text-[23px] text-black;
+  }
 
-			p {
-				@apply text-xl text-black;
-			}
-		}
-	}
+  p {
+    @apply text-[19px] text-black;
+  }
 }
 
 .buttons {
-	@apply mt-5 inline-block w-[150px] rounded bg-green-500 px-6 py-2.5 text-sm font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg;
+  @apply mt-5 inline-block w-[150px] rounded bg-green-500 px-6 py-2.5 text-sm font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg;
 }
 
-@media (max-width: 1126px) {
-	.cardContainer {
-		@apply w-[450px]
-
-	}
-	.cardContent {
-
-		h2 {
-			@apply text-xl
-		}
-
-		p {
-			@apply text-sm
-		}
-	}
-
+.buttonWrap {
+  @apply w-full h-full mt-20
 }
+
+@media (max-width: 1208px) {
+  .characterCard {
+
+    .cardContainer {
+      @apply w-[400px]
+
+
+    }
+
+    .cardContent {
+      h2 {
+        @apply text-[18px] ;
+      }
+
+      p {
+        @apply text-[15px];
+      }
+    }
+
+
+  }
+  .status {
+    img {
+      @apply p-0 m-0 h-[200px]
+    }
+  }
+
+
+  .buttons {
+    @apply w-[140px]
+  }
+  .buttonWrap {
+    @apply mt-6
+  }
+}
+
+@media (max-width: 840px) {
+  .characterCard {
+
+    .cardContainer {
+      @apply w-[350px]  min-h-fit
+
+
+    }
+
+    .cardContent {
+      h2 {
+        @apply text-[15px] ;
+      }
+
+      p {
+        @apply text-[10px];
+      }
+    }
+
+    .buttonWrap {
+      @apply mt-[0px] min-h-fit
+    }
+
+    .buttons {
+      @apply w-[120px] text-[12px] p-1
+    }
+
+  }
+}
+
+
+  @media (max-width: 787px) {
+    .characterCard {
+
+      .cardContainer {
+        @apply w-[300px]
+
+
+      }
+
+
+    }
+    .buttons {
+      @apply text-[10px] mt-[0px] p-0
+    }
+  }
+
+  @media (max-width: 580px) {
+    .characterCard {
+      .cardContainer {
+        @apply relative flex h-fit w-[450px] ;
+        .status {
+          img {
+            @apply h-fit w-full
+          }
+        }
+      }
+
+      .cardContent {
+        @apply flex flex-col justify-evenly gap-y-3.5 p-5;
+        h2 {
+          @apply text-[18px] text-black;
+        }
+
+        p {
+          @apply text-[13px] text-black;
+        }
+      }
+      .buttonWrap {
+        @apply mt-[40px]
+      }
+      .buttons {
+        @apply text-[18px]
+      }
+
+    }
+
+  }

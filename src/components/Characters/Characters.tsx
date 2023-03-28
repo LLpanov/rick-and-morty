@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks';
 import { getAllCharacters, setCurrentPageCharacter } from '../../store';
 import { Character } from '../Character';
 import { Input } from '../Input';
+import style from './Characters.module.scss';
 
 const Characters: FC = () => {
 	const {
@@ -34,7 +35,7 @@ const Characters: FC = () => {
 		<>
 			<Input />
 
-			<section className='grid grid-cols-2 gap-5 mt-10 place-items-center'>
+			<section className={style.charactersBlock}>
 				{characters.map(character => (
 					<Character key={character.id} character={character} />
 				))}

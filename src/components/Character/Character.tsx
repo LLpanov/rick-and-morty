@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ICharacter } from '../../interfaces';
@@ -8,7 +8,7 @@ interface ICharacterProps {
 	character: ICharacter;
 }
 
-const Character: FC<ICharacterProps> = ({ character }) => {
+const Character: FC<ICharacterProps> = React.memo(({ character }) => {
 	return (
 		<>
 			<section className={styles.characterCard}>
@@ -20,14 +20,16 @@ const Character: FC<ICharacterProps> = ({ character }) => {
 					<div className={styles.cardContent}>
 						<h2>{character.name}</h2>
 						<p>Gender : {character.gender}</p>
-						<Link to={character.id.toString()} state={{ character }}>
-							<button className={styles.buttons}>Details</button>
-						</Link>
+						<div className={styles.buttonWrap}>
+							<Link to={character.id.toString()} state={{ character }}>
+								<button className={styles.buttons}>Details</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</section>
 		</>
 	);
-};
+});
 
 export { Character };
