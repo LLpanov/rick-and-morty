@@ -1,0 +1,8 @@
+.locationWrap{
+  @apply grid grid-cols-2 gap-5 mt-10 place-items-center
+}
+@media (max-width: 750px){
+  .locationWrap{
+    @apply grid grid-cols-1 gap-5 mt-10 place-items-center
+  }
+}

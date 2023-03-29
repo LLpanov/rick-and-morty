@@ -1,0 +1,35 @@
+.heading {
+  @apply flex bg-slate-700 h-[100px]  justify-center items-center;
+}
+
+.residentBlock {
+  @apply grid grid-cols-3 place-items-center bg-slate-400  gap-y-3.5 py-2.5
+}
+
+
+@media (max-width: 1045px) {
+  .heading {
+    @apply flex bg-slate-700 h-[60px]  justify-center items-center;
+    > h1 {
+      @apply text-2xl
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .residentBlock {
+    @apply grid grid-cols-2 place-items-center bg-slate-400  gap-y-5 py-2.5
+  }
+}
+
+@media (max-width: 530px) {
+  .residentBlock {
+    @apply grid grid-cols-1 place-items-center bg-slate-400  gap-y-5 py-2.5
+  }
+  .heading {
+    @apply flex bg-slate-700 h-[50px]  justify-center items-center;
+    > h1 {
+      @apply text-xl
+    }
+  }
+}

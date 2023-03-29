@@ -70,7 +70,7 @@ const Input: FC = () => {
 						{error && <span>Not found this character...</span>}
 					</form>
 				</section>
-				<div className='flex-col items-center justify-center'>
+				<div className='flex-col flex-wrap items-center justify-center'>
 					{filteredCharacters.length > 0 && (
 						<div className={styles.animatedBox}>
 							{filteredCharacters.map(hero => (

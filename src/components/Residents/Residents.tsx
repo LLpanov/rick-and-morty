@@ -5,6 +5,7 @@ import { ICharacter } from '../../interfaces';
 import { charactersService } from '../../services';
 import { Error } from '../Error';
 import { ResidentCard } from '../ResidentCard';
+import style from './Residents.module.scss';
 
 const Residents: FC = () => {
 	const {
@@ -34,15 +35,15 @@ const Residents: FC = () => {
 
 	return (
 		<>
-			<section className={' flex bg-slate-700 h-[100px]  justify-center items-center '}>
-				<h1 className={'text-gray-200 text-center font-bold text-3xl'}> Residents of Location : {name} </h1>
+			<section className={style.heading}>
+				<h1 className={'text-gray-200 text-center font-bold text-3xl '}> Residents of Location : {name} </h1>
 			</section>
 			{loading ? (
 				<section className={'text-center py-2.5'}>
 					<p>Loading...</p>
 				</section>
 			) : charactersData.length ? (
-				<section className={'grid grid-cols-3  place-items-center bg-slate-400  gap-y-3.5 py-2.5'}>
+				<section className={style.residentBlock}>
 					{charactersData.map(resident => (
 						<ResidentCard key={resident.id} resident={resident} />
 					))}

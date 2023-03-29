@@ -3,6 +3,7 @@ import React, { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { getAllLocations, setCurrentLocationPage } from '../../store';
 import { Location } from '../Location';
+import style from './Locations.module.scss';
 
 const Locations: FC = () => {
 	const {
@@ -26,7 +27,7 @@ const Locations: FC = () => {
 	};
 	return (
 		<>
-			<section className={'grid grid-cols-2 gap-5 mt-10 place-items-center'}>
+			<section className={style.locationWrap}>
 				{locations.map(location => (
 					<Location key={location.id} location={location} />
 				))}

@@ -1,0 +1,27 @@
+.boxCharacter{
+  @apply grid grid-cols-4 mt-10 place-items-center;
+}
+.headText{
+  @apply justify-center text-2xl text-gray-200 text-center items-center mt-4 h-full;
+}
+
+@media (max-width: 1279px){
+  .boxCharacter{
+    @apply grid-cols-3;
+  }
+}
+
+@media (max-width: 1042px){
+  .boxCharacter{
+    @apply grid-cols-2;
+  }
+  .headText{
+    @apply text-xl
+  }
+}
+
+@media (max-width: 650px){
+  .boxCharacter{
+    @apply grid-cols-1;
+  }
+}

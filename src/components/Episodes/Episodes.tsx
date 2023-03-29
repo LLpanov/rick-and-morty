@@ -3,6 +3,7 @@ import React, { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { getAllEpisodes, setCurrentPage } from '../../store';
 import { Episode } from '../Episode';
+import style from './Episodes.module.scss';
 
 const Episodes: FC = () => {
 	const { episodes, info, currentPage } = useAppSelector(state => state.episodesReducer);
@@ -27,7 +28,7 @@ const Episodes: FC = () => {
 
 	return (
 		<>
-			<section className='flex flex-wrap gap-4   justify-center mt-16   touch-auto '>
+			<section className={style.episodeWrap}>
 				{episodes.map(episode => (
 					<Episode key={episode.id} episode={episode} />
 				))}
