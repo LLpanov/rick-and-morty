@@ -25,7 +25,7 @@ const CharacterDetail: FC = () => {
 						<Link to='/characters'>
 							<button>
 								<svg className='h-6 w-full text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-									<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 16l-4-4m0 0l4-4m-4 4h18' />
+									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M7 16l-4-4m0 0l4-4m-4 4h18' />
 								</svg>
 							</button>
 						</Link>

@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useCallback, useEffect } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { getAllCharacters, setCurrentPageCharacter } from '../../store';
@@ -17,19 +17,26 @@ const Characters: FC = () => {
 		dispatch(getAllCharacters(currentPage));
 	}, [currentPage, dispatch]);
 
-	const handlePrevClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
+	const handlePrevClick = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement>) => {
+			e.preventDefault();
 
-		if (currentPage > 1) {
-			dispatch(setCurrentPageCharacter(currentPage - 1));
-		}
-	};
-	const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
-		if (currentPage < pages) {
-			dispatch(setCurrentPageCharacter(currentPage + 1));
-		}
-	};
+			if (currentPage > 1) {
+				dispatch(setCurrentPageCharacter(currentPage - 1));
+			}
+		},
+		[currentPage, dispatch, setCurrentPageCharacter]
+	);
+
+	const handleNextClick = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement>) => {
+			e.preventDefault();
+			if (currentPage < pages) {
+				dispatch(setCurrentPageCharacter(currentPage + 1));
+			}
+		},
+		[currentPage, dispatch, setCurrentPageCharacter]
+	);
 
 	return (
 		<>
@@ -45,17 +52,17 @@ const Characters: FC = () => {
 					<nav aria-label='Page navigation example'>
 						<ul className='flex list-style-none'>
 							<li className='page-item'>
-								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handlePrevClick}>
+								<button className='page-link relative block py-1.5 px-3 rounded-xl border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handlePrevClick}>
 									Prev
 								</button>
 							</li>
 							<li className='page-item'>
-								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
+								<button className='page-link relative block py-1.5 px-3 rounded-xl border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
 									{currentPage}
 								</button>
 							</li>
 							<li className='page-item'>
-								<button className='page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
+								<button className='page-link relative block py-1.5 px-3 rounded-xl border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 focus:shadow-none' onClick={handleNextClick}>
 									Next
 								</button>
 							</li>

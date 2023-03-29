@@ -31,7 +31,7 @@ const Residents: FC = () => {
 			setLoading(false);
 		};
 		loadData();
-	}, [heroIds]);
+	}, []);
 
 	return (
 		<>

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { IEpisode } from '../../interfaces';
@@ -8,7 +8,7 @@ interface IEpisodesProps {
 	episode: IEpisode;
 }
 
-const Episode: FC<IEpisodesProps> = ({ episode: { id, episode, name, air_date, characters } }) => {
+const Episode: FC<IEpisodesProps> = React.memo(({ episode: { id, episode, name, air_date, characters } }) => {
 	return (
 		<>
 			<div>
@@ -24,6 +24,6 @@ const Episode: FC<IEpisodesProps> = ({ episode: { id, episode, name, air_date, c
 			</div>
 		</>
 	);
-};
+});
 
 export { Episode };

@@ -1,4 +1,9 @@
 .episodeWrap{
-   @apply flex  flex-wrap justify-center gap-4 mt-16
+   @apply grid grid-cols-2 place-items-center mt-16 h-max gap-5
 }
 
+@media (max-width: 690px){
+   .episodeWrap{
+      @apply grid grid-cols-1;
+   }
+}

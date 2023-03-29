@@ -160,3 +160,36 @@
     }
 
   }
+
+
+@media (max-width: 488px) {
+  .characterCard {
+    .cardContainer {
+      @apply relative flex h-fit w-[300px] ;
+      .status {
+        img {
+          @apply h-[183px] w-full
+        }
+      }
+    }
+
+    .cardContent {
+      @apply flex flex-col justify-evenly gap-y-3.5 p-5;
+      h2 {
+        @apply text-[18px] text-black;
+      }
+
+      p {
+        @apply text-[13px] text-black;
+      }
+    }
+    .buttonWrap {
+      @apply mt-[40px]
+    }
+    .buttons {
+      @apply text-[18px]
+    }
+
+  }
+
+}

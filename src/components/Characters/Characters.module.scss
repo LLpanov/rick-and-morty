@@ -1,8 +1,8 @@
 .charactersBlock{
-  @apply grid grid-cols-2 gap-5 mt-10 place-items-center
+  @apply grid grid-cols-2 gap-5 mt-28 place-items-center
 }
 @media (max-width: 580px){
   .charactersBlock{
-    @apply grid grid-cols-1 gap-5 mt-10 place-items-center
+    @apply grid grid-cols-1 gap-5 mt-28 place-items-center
   }
 }

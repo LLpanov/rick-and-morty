@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import { ICharacter } from '../../interfaces';
 import style from './HeroWithEpisode.module.scss';
@@ -7,7 +7,7 @@ interface ICharacterProps {
 	character: ICharacter;
 }
 
-const HeroWithEpisode: FC<ICharacterProps> = ({ character }) => {
+const HeroWithEpisode: FC<ICharacterProps> = React.memo(({ character }) => {
 	const { name, image, status, gender, type } = character;
 
 	return (
@@ -23,6 +23,6 @@ const HeroWithEpisode: FC<ICharacterProps> = ({ character }) => {
 			</div>
 		</section>
 	);
-};
+});
 
 export { HeroWithEpisode };
