@@ -6,7 +6,7 @@
 }
 
 .heroContainer {
-  @apply relative flex h-full w-[750px] cursor-pointer flex-col rounded-lg bg-slate-400 shadow-lg md:max-w-xl md:flex-row ;
+  @apply relative flex h-fit w-auto cursor-pointer flex-col rounded-lg bg-slate-400 shadow-lg md:max-w-xl md:flex-row ;
   .statusHero {
     @apply relative;
     img {
@@ -36,54 +36,50 @@
   p {
     @apply text-black text-[15px];
   }
-}
 
-
-@media (max-width: 1177px) {
-  .heroContent {
-    h2 {
-      @apply text-xl text-black font-semibold gap-y-2;
-    }
-
-    p {
-      @apply text-black text-[15px];
-    }
-  }
+  @media (max-width: 1177px){
   .heroContainer {
-    @apply w-[500px]
-  }
-}
-
-@media (max-width: 1033px) {
-  .heroContainer {
-    @apply w-[450px] h-[250px];
-    .statusHero {
-      @apply relative;
-      img {
-        @apply w-[220px] h-[250px];
-      }
-
-      .heroContent {
-        @apply gap-1
-      }
-
+    @apply w-[450px];
+    .heroContent {
       h2 {
-        @apply text-[10px] text-black ;
+        @apply text-xl text-black font-semibold gap-y-2;
       }
 
       p {
-        @apply text-[9px];
+        @apply text-black text-[15px];
       }
-
     }
-
+  }
 
   }
-}
+
+  @media (max-width: 1033px) {
+    .heroContainer {
+      @apply w-[450px] h-[250px];
+      .statusHero {
+        @apply relative;
+        img {
+          @apply w-[220px] h-[250px];
+        }
+
+        .heroContent {
+          @apply gap-1
+        }
+
+        h2 {
+          @apply text-[10px] text-black ;
+        }
+
+        p {
+          @apply text-[9px];
+        }
+      }
+    }
+  }
 
   @media (max-width: 837px) {
     .heroContainer {
-      @apply w-[500px] h-[280px];
+      @apply w-[400px] h-[280px];
       .statusHero {
         @apply relative;
         img {
@@ -91,7 +87,7 @@
         }
       }
 
-      .heroContent{
+      .heroContent {
         @apply relative ;
         h2 {
           @apply text-[15px] text-black ;
@@ -101,38 +97,31 @@
           @apply text-[12px];
         }
       }
-
     }
-
   }
 
-@media (max-width: 765px) {
-  .heroContainer {
-    @apply w-[450px] h-[280px];
-    .statusHero {
-      @apply absolute;
-      img {
-        @apply w-[250px] h-[280px];
+  @media (max-width: 765px) {
+    .heroContainer {
+      @apply w-[450px] h-[280px];
+      .statusHero {
+        @apply absolute;
+        img {
+          @apply w-[250px] h-[280px];
+        }
+      }
+
+      .heroContent {
+        @apply relative left-1/2 ml-2 gap-4;
+        h2 {
+          @apply text-[14px] text-black ;
+        }
+
+        p {
+          @apply text-[11px];
+        }
       }
     }
-
-    .heroContent{
-      @apply relative left-1/2 ml-2 gap-4;
-      h2 {
-        @apply text-[14px] text-black ;
-      }
-
-      p {
-        @apply text-[11px];
-      }
-    }
-
   }
-
-}
-
-
-
 
   @media (max-width: 637px) {
     .heroContainer {
@@ -143,31 +132,26 @@
           @apply w-[150px] h-[180px];
         }
       }
-      .heroContent{
+
+      .heroContent {
         @apply relative gap-1 m-0 w-fit;
-
-      }
-
-    }
-
-
-  }
-
-@media (max-width: 500px) {
-  .heroContainer {
-    @apply w-[310px] h-[180px] ;
-    .statusHero {
-      @apply absolute;
-      img {
-        @apply w-[120px] h-[180px];
       }
     }
-    .heroContent{
-      @apply gap-1 w-fit left-1/3;
-
-    }
-
   }
 
+  @media (max-width: 500px) {
+    .heroContainer {
+      @apply w-[310px] h-[180px] ;
+      .statusHero {
+        @apply absolute;
+        img {
+          @apply w-[120px] h-[180px];
+        }
+      }
 
+      .heroContent {
+        @apply gap-1 w-fit left-1/3;
+      }
+    }
+  }
 }

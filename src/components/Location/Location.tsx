@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ILocation } from '../../interfaces';
@@ -8,7 +8,7 @@ interface ILocationProps {
 	location: ILocation;
 }
 
-const Location: FC<ILocationProps> = ({ location: { id, name, type, dimension, residents } }) => {
+const Location: FC<ILocationProps> = React.memo(({ location: { id, name, type, dimension, residents } }) => {
 	return (
 		<>
 			<section className={styles.locationCard}>
@@ -26,6 +26,6 @@ const Location: FC<ILocationProps> = ({ location: { id, name, type, dimension, r
 			</section>
 		</>
 	);
-};
+});
 
 export { Location };

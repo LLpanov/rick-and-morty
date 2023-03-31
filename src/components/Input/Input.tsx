@@ -56,10 +56,10 @@ const Input: FC = () => {
 									pattern: /^[a-zA-Z]+$/
 								})}
 								id='default-search'
-								className={'placeholder-gray-100 flex-grow rounded-lg border border-gray-300' + ' bg-gray-50 p-4 pl-10 text-[16px] text-gray-100 focus:ring-gray-500 border-gray-500 bg-gray-400 focus:border-grey-600 focus:ring-gray-500'}
+								className={'placeholder-gray-100 flex-grow rounded-lg border border-gray-300 p-4 pl-10 text-[16px] text-gray-100 focus:ring-gray-500  bg-gray-400 focus:border-grey-600 '}
 								placeholder='Search characters...'
 							/>
-							<button type='submit' className='bg-green-700 hover:bg-green-800 text-gray-200 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 bg-green-600 :hover:bg-green-700 focus:ring-green-800'>
+							<button type='submit' className='bg-green-700 hover:bg-green-800 text-gray-200 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2  :hover:bg-green-700 focus:ring-green-800'>
 								Search
 							</button>
 						</div>

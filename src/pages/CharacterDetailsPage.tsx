@@ -1,11 +1,9 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { CharacterDetail } from '../components';
 
 const CharacterDetailsPage: FC = () => {
-	return (
-			<CharacterDetail />
-	);
+	return <CharacterDetail />;
 };
 
 export { CharacterDetailsPage };

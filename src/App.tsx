@@ -1,15 +1,8 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { Layout } from './components';
-import {
-	CharacterDetailsPage,
-	CharactersPage, EpisodeCharactersPage,
-	EpisodesPage,
-	ErrorPage,
-	LocationPage,
-	LocationResidentsPage
-} from './pages';
+import { CharacterDetailsPage, CharactersPage, EpisodeCharactersPage, EpisodesPage, ErrorPage, LocationPage, LocationResidentsPage } from './pages';
 
 const App: FC = () => {
 	return (
@@ -25,9 +18,8 @@ const App: FC = () => {
 
 				<Route path={'location'} element={<LocationPage />} />
 				<Route path={'location/:id'} element={<LocationResidentsPage />} />
-				<Route path={'*'} element={<ErrorPage/>} />
+				<Route path={'*'} element={<ErrorPage />} />
 			</Route>
-
 		</Routes>
 	);
 };

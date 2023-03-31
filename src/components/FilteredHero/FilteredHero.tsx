@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import { ICharacter } from '../../interfaces';
 import styles from './FilteredHero.module.scss';
@@ -7,7 +7,7 @@ interface IHeroProps {
 	hero: ICharacter;
 }
 
-const FilteredHero: FC<IHeroProps> = ({ hero: { name, gender, image, status, origin, species, location, type } }) => {
+const FilteredHero: FC<IHeroProps> = React.memo(({ hero: { name, gender, image, status, origin, species, location, type } }) => {
 	return (
 		<>
 			<section className={styles.cardHero}>
@@ -28,6 +28,6 @@ const FilteredHero: FC<IHeroProps> = ({ hero: { name, gender, image, status, ori
 			</section>
 		</>
 	);
-};
+});
 
 export { FilteredHero };

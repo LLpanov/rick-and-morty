@@ -1,11 +1,9 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { Episodes } from '../components';
 
 const EpisodesPage: FC = () => {
-	return (
-			<Episodes />
-	);
+	return <Episodes />;
 };
 
 export { EpisodesPage };

@@ -1,11 +1,9 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { Locations } from '../components';
 
 const LocationPage: FC = () => {
-	return (
-			<Locations />
-	);
+	return <Locations />;
 };
 
 export { LocationPage };
