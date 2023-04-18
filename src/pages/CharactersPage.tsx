@@ -1,9 +1,10 @@
 import { FC } from 'react';
 
-import { Characters } from '../components';
+import { Characters } from "../components/Characters";
+
 
 const CharactersPage: FC = () => {
-	return <Characters />;
+    return <Characters/>;
 };
 
 export { CharactersPage };

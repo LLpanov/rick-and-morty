@@ -1,9 +1,10 @@
 import { FC } from 'react';
 
-import { Error } from '../components';
+import { Error } from "../components/Error";
+
 
 const ErrorPage: FC = () => {
-	return <Error />;
+    return <Error/>;
 };
 
 export { ErrorPage };

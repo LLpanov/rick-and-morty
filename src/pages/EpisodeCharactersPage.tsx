@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
-import { CharactersWithEpisode } from '../components';
+import { CharactersWithEpisode } from "../components/CharactersWithEpisode";
+
 
 const EpisodeCharactersPage: FC = () => {
-	return <CharactersWithEpisode />;
+    return <CharactersWithEpisode/>;
 };
 
 export { EpisodeCharactersPage };

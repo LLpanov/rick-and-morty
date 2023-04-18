@@ -1,5 +1,6 @@
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	mode: 'jit',
+	content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
 	theme: {
 		extend: {
 			transitionTimingFunction: {

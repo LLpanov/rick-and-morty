@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ICharacter } from '../../interfaces';
-import styles from './Character.module.scss';
+import styles  from './Character.module.scss'
 
 interface ICharacterProps {
 	character: ICharacter;

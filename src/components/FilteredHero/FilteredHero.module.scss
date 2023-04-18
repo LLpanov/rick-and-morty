@@ -14,15 +14,24 @@
     }
 
     .heroAlive {
-      @apply absolute right-1 top-1 h-[30px] w-[85px] rounded-b-sm bg-green-600 opacity-90 p-2 text-center text-[11px] font-bold text-white shadow-md;
+      @apply absolute right-1 top-1  rounded-b-sm bg-green-600 opacity-90 p-2 text-center font-bold text-white shadow-md;
+      height: 30px;
+      width: 85px;
+      font-size: 11px;
     }
 
     .heroDead {
-      @apply absolute right-1 top-1 h-[30px] w-[85px]  rounded-b-sm bg-red-500 opacity-90 p-2 text-center text-[11px] font-bold text-white shadow-md;
+      @apply absolute right-1 top-1 rounded-b-sm bg-red-500 opacity-90 p-2 text-center  font-bold text-white shadow-md;
+      height: 30px;
+      width: 85px;
+      font-size: 11px;
     }
 
     .heroUnknown {
-      @apply absolute right-1 top-1 h-[30px] w-[85px]  rounded-b-sm bg-white opacity-90 p-2 text-center text-[11px]  font-bold text-black shadow-md;
+      @apply absolute right-1 top-1 rounded-b-sm bg-white opacity-90 p-2 text-center font-bold text-black shadow-md;
+      height: 30px;
+      width: 85px;
+      font-size: 11px;
     }
   }
 }
@@ -34,32 +43,37 @@
   }
 
   p {
-    @apply text-black text-[15px];
+    @apply text-black ;
+    font-size: 15px;
   }
 
-  @media (max-width: 1177px){
-  .heroContainer {
-    @apply w-[450px];
-    .heroContent {
-      h2 {
-        @apply text-xl text-black font-semibold gap-y-2;
-      }
+  @media (max-width: 1177px) {
+    .heroContainer {
+      width: 450px;
 
-      p {
-        @apply text-black text-[15px];
+      .heroContent {
+        h2 {
+          @apply text-xl text-black font-semibold gap-y-2;
+        }
+
+        p {
+          font-size: 15px;
+        }
       }
     }
-  }
 
   }
 
   @media (max-width: 1033px) {
     .heroContainer {
-      @apply w-[450px] h-[250px];
+      width: 450px;
+      height: 250px;
+
       .statusHero {
         @apply relative;
         img {
-          @apply w-[220px] h-[250px];
+          width: 220px;
+          height: 250px;
         }
 
         .heroContent {
@@ -67,11 +81,11 @@
         }
 
         h2 {
-          @apply text-[10px] text-black ;
+          font-size: 10px;
         }
 
         p {
-          @apply text-[9px];
+          font-size: 9px;
         }
       }
     }
@@ -79,22 +93,25 @@
 
   @media (max-width: 837px) {
     .heroContainer {
-      @apply w-[400px] h-[280px];
+      width: 400px;
+      height: 280px;
+
       .statusHero {
         @apply relative;
         img {
-          @apply w-[250px] h-[280px];
+          width: 250px;
+          height: 280px;
         }
       }
 
       .heroContent {
         @apply relative ;
         h2 {
-          @apply text-[15px] text-black ;
+          font-size: 15px;
         }
 
         p {
-          @apply text-[12px];
+          font-size: 12px;
         }
       }
     }
@@ -102,22 +119,23 @@
 
   @media (max-width: 765px) {
     .heroContainer {
-      @apply w-[450px] h-[280px];
+
       .statusHero {
         @apply absolute;
         img {
-          @apply w-[250px] h-[280px];
+          width: 250px;
+          height: 280px;
         }
       }
 
       .heroContent {
         @apply relative left-1/2 ml-2 gap-4;
         h2 {
-          @apply text-[14px] text-black ;
+          font-size: 14px;
         }
 
         p {
-          @apply text-[11px];
+          font-size: 11px;
         }
       }
     }
@@ -125,14 +143,16 @@
 
   @media (max-width: 637px) {
     .heroContainer {
-      @apply w-[400px] h-[180px] ;
+      width: 400px;
+      height: 180px;
+
       .statusHero {
         @apply absolute;
         img {
-          @apply w-[150px] h-[180px];
+          width: 150px;
+          height: 180px;
         }
       }
-
       .heroContent {
         @apply relative gap-1 m-0 w-fit;
       }
@@ -141,11 +161,13 @@
 
   @media (max-width: 500px) {
     .heroContainer {
-      @apply w-[310px] h-[180px] ;
+      width: 310px;
+      height: 180px;
       .statusHero {
         @apply absolute;
         img {
-          @apply w-[120px] h-[180px];
+          width: 120px;
+          height: 180px;
         }
       }
 
